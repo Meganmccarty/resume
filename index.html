@@ -61,18 +61,31 @@
                 margin-bottom: 2.5px;
                 padding: 0px;
             }
+            .summary {
+                margin: 5px;
+                text-align: center;
+            }
             .date {
-                width: 15%;
+                width: 12%;
                 margin: 0;
                 text-align: right;
                 padding-right: 10px;
                 border-right: 3px solid rgb(57, 121, 156);
             }
             .item {
-                width: 85%;
-                margin: 5px;
+                width: 81%;
                 margin: 0;
                 padding-left: 10px;
+            }
+            .empty-date {
+                width: 3%;
+            }
+            .item-no-date {
+                width: 90%;
+                margin: 0;
+                padding-left: 10px;
+                padding-right: 10px;
+                border-left: 3px solid rgb(57, 121, 156);
             }
             h1 {
                 font-size: 33px;
@@ -88,6 +101,11 @@
             ul {
                 margin-top: 0px;
                 margin-bottom: 5px;
+            }
+
+            li {
+                font-size: 14px;
+                margin: 2px;
             }
             span {
                 padding: 1px;
@@ -117,12 +135,19 @@
             </div>
         </div>
         <div class="content">
+            <div class="summary">
+                Passionate, self-motivated full-stack web developer with 1 year experience managing 
+                various Django projects for clients. Eager to support Artemis deliver value to their 
+                clients using Google Cloud Platform. Enthusiastic team-player who empowers and mentors 
+                women in coding.
+            </div>
             <h2 class="heading">Education</h2>
             <div class="item-box">
-                <div class="date">
+                <div class="empty-date"></div>
+                <!--<div class="date">
                     <span>Jun. 2019–Dec. 2019</span>
-                </div>
-                <div class="item">
+                </div>-->
+                <div class="item-no-date">
                     <span>
                         Took two courses at Northern Virginia Community College (GPA 4.0): 
                         Software Design (ITP 10000) and Client Side Scripting (ITP 14000)
@@ -130,13 +155,14 @@
                 </div>
             </div>
             <div class="item-box">
-                <div class="date">
+                <div class="empty-date"></div>
+                <!--<div class="date">
                     <span>May 2018</span>
-                </div>
-                <div class="item">
+                </div>-->
+                <div class="item-no-date">
                     <span>
                         Graduated from Purdue University with Highest Distinction, B.S. in 
-                        Entomology, GPA 4.0
+                        Entomology, GPA 4.0 (May 2018)
                     </span>
                 </div>
             </div>
@@ -144,16 +170,40 @@
             <h3 class="subheading">Freelance Web Developer (Aug. 2019–Present)</h3>
             <div class="item-box">
                 <div class="date">
-                    <span>Feb. 2020–Present</span>
+                    <span>Aug. 2019–Present</span>
                 </div>
                 <div class="item">
                     <span>
                         Currently working as a freelance web developer, using Python, Django, 
                         PostgreSQL/MySQL, HTML, CSS, Javascript, jQuery, and Bootstrap
                     </span>
+                    <br>
+                    <ul>
+                        <li>
+                            Created a Django-powered blog for an artist, featuring a built-in newsletter 
+                            backend, email notifications, and use of Etsy’s API: 
+                            <a href="https://www.zenstudio413.com/">https://www.zenstudio413.com</a>
+                        </li>
+                        <li>
+                            Created a simple Django website for a Smithsonian researcher showcasing 
+                            their scientific accomplishments, with features including responsive 
+                            design and a simple search for easily finding items in a list: 
+                        <a href="https://davidadamski.pythonanywhere.com/">https://davidadamski.pythonanywhere.com</a>
+                        </li>
+                        <li>
+                            Created a Django web app for my personal entomology collection, 
+                            featuring use of Google Maps API; Google Custom Search; and a searchable, 
+                            filterable, and sortable specimen record table (still a work-in-progress, more features planned): 
+                            <a href="https://www.meganemccartycollection.com/">https://www.meganemccartycollection.com</a>
+                        </li>
+                        <li>
+                            Created a one-page portfolio website: 
+                            <a href="https://meganmccarty.github.io/portfolio/">https://meganmccarty.github.io/portfolio/</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="item-box">
+            <!--<div class="item-box">
                 <div class="date">
                     <span>Aug. 2019–Present</span>
                 </div>
@@ -201,7 +251,7 @@
                         <a href="https://www.zenstudio413.com/">https://www.zenstudio413.com</a>
                     </span>
                 </div>
-            </div>
+            </div>-->
             <div class="item-box">
                 <div class="date">
                     <span>Feb. 2020</span>
@@ -223,9 +273,23 @@
                     <span>
                         Currently working part-time at Starbucks as a Barista
                     </span>
+                    <ul>
+                        <li>
+                            Promoted to Barista Trainer due to being knowledgable, kind,
+                            helpful, and patient teaching others
+                        </li>
+                        <li>
+                            Promoted to Tip Distribution Leader due to being honest, 
+                            responsible, and driven
+                        </li>
+                        <li>
+                            Recognized as Partner of the Quarter for outstanding 
+                            customer service, leadership, and teamwork
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="item-box">
+            <!--<div class="item-box">
                 <div class="date">
                     <span>Apr. 2019</span>
                 </div>
@@ -257,7 +321,7 @@
                         customer service, leadership, and teamwork
                     </span>
                 </div>
-            </div>
+            </div>-->
             <h3 class="subheading">National Museum of Natural History, Smithsonian Institution (Jun. 2018–Present)</h3>
             <div class="item-box">
                 <div class="date">
@@ -266,9 +330,18 @@
                 <div class="item">
                     <span>
                         Currently a Research Collaborator at the Smithsonian Institution’s National 
-                        Museum of Natural History. Duties include specimen curation, databasing, 
-                        and digitizing, as well as collaborating with researchers on various projects 
+                        Museum of Natural History.
                     </span>
+                    <ul>
+                        <li>
+                            Duties include specimen curation, databasing, 
+                            and digitizing, as well as collaborating with researchers on various projects 
+                        </li>
+                        <li>
+                            Volunteer at Young Entomologist Group meetings, teaching kids about insects 
+                            and scientific collecting techniques
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="item-box">
@@ -278,13 +351,25 @@
                 <div class="item">
                     <span>
                         Interned at the Smithsonian Institution’s National Museum of Natural History 
-                        under Dr. David Adamski, describing two new species of moths in the genus 
-                        <i>Frumenta</i> and evaluating <i>Frumenta’s</i> placement within the gelechiid 
-                        tribe Gnorimoschemini
+                        under Dr. David Adamski
                     </span>
+                    <ul>
+                        <li>
+                            Described two new species of moths in the genus 
+                            <i>Frumenta</i> and evaluated <i>Frumenta’s</i> placement within the gelechiid 
+                            tribe Gnorimoschemini
+                        </li>
+                        <li>
+                            Co-facilitated entomological workshops for Smithsonian interns
+                        </li>
+                        <li>
+                            Helped lead a moth workshop and moth collecting outreach event at the Leesburg 
+                            chapter of the Izaac Walton League
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="item-box">
+            <!--<div class="item-box">
                 <div class="date">
                     <span>Jul. 2018–Present</span>
                 </div>
@@ -315,7 +400,7 @@
                         chapter of the Izaac Walton League
                     </span>
                 </div>
-            </div>
+            </div>-->
             <h3 class="subheading">Purdue University (Sep. 2014–Apr 2018)</h3>
             <div class="item-box">
                 <div class="date">
@@ -341,6 +426,13 @@
                         under Dr. Tim Anderson (Jun. 2017–Apr. 2018). Duties included curating, databasing, 
                         digitizing, and spreading field-pinned Lepidoptera
                     </span>
+                    <ul>
+                        <li>
+                            Completed a semester-long undergraduate research project under Dr. Jennifer Zaspel on 
+                            the chemical ecology of arctiine moths (Jan. 2015–May 2015) and presented this project 
+                            at The Lepidopterists’ Society meeting at Purdue University, West Lafayette, IN (Jul. 2015)
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="item-box">
@@ -363,9 +455,15 @@
                         structure across habitat types at Big Oaks National Wildlife Refuge in Madison, IN 
                         under Dr. Jeffrey Holland
                     </span>
+                    <ul>
+                        <li>
+                            Led moth survey at Red-tail Land Conservancy in Muncie, IN; specimens collected from 
+                            this bioblitz are housed in the Purdue Entomological Research Collection
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="item-box">
+            <!--<div class="item-box">
                 <div class="date">
                     <span>Jun. 2017</span>
                 </div>
@@ -395,7 +493,7 @@
                         Managed the Thomas Say Entomological Society booth at Bug Bowl
                     </span>
                 </div>
-            </div>
+            </div>-->
             <div class="item-box">
                 <div class="date">
                     <span>May 2015–May 2017</span>
@@ -405,9 +503,20 @@
                         Served two terms as President of the Thomas Say Entomological Society 
                         (Purdue student organization)
                     </span>
+                    <ul>
+                        <li>
+                            Managed the Thomas Say Entomological Society booth at Bug Bowl
+                        </li>
+                        <li>
+                            Volunteered at Bug Bowl as part of Purdue’s annual Spring Fest activities
+                        </li>
+                        <li>
+                            Volunteered at various Purdue entomological outreach programs with Dr. Gwen Pearson
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="item-box">
+            <!--<div class="item-box">
                 <div class="date">
                     <span>Apr. 2015</span>
                 </div>
@@ -428,26 +537,28 @@
                         at The Lepidopterists’ Society meeting at Purdue University, West Lafayette, IN (Jul. 2015)
                     </span>
                 </div>
-            </div>
+            </div>-->
             <h2 class="heading">Publications</h2>
             <div class="item-box">
-                <div class="date">
+                <div class="empty-date"></div>
+                <!--<div class="date">
                     <span>2020</span>
-                </div>
-                <div class="item">
+                </div>-->
+                <div class="item-no-date">
                     <span>
                         <b>McCarty, M.E.</b>, D. Adamski, M.A. Metz, and J.F. Landry (2020). Two New Species 
                         in the Genus <i>Frumenta</i> Busck 1939 (Lepidoptera: Gelechiidae: Gnorimoschemini) with 
                         Discovery of a Culcitula in the Male. <i>Proceedings of the Entomological Society of 
-                        Washington.</i> (accepted)
+                        Washington</i>, 122(2): 415–441
                     </span>
                 </div>
             </div>
             <div class="item-box">
-                <div class="date">
+                <div class="empty-date"></div>
+                <!--<div class="date">
                     <span>2017</span>
-                </div>
-                <div class="item">
+                </div>-->
+                <div class="item-no-date">
                     <span>
                         Anderson, T.J., D.L. Wagner, B.R. Cooper, <b>M.E. McCarty</b>, and J.M. Zaspel (2017). 
                         HPLC-MS of Lichen-Derived Metabolites in the Life Stages of <i>Crambidia cephalica</i> 
@@ -457,10 +568,11 @@
                 </div>
             </div>
             <div class="item-box">
-                <div class="date">
+                <div class="empty-date"></div>
+                <!--<div class="date">
                     <span>2016</span>
-                </div>
-                <div class="item">
+                </div>-->
+                <div class="item-no-date">
                     <span>
                         Snyder, J.L., G.S. Powell, R.S. Behring, A.M. Alford, <b>M.E. McCarty</b>, and J.M. 
                         Zaspel (2016). Distribution, Phenology, and Notes on the Development of <i>Calyptra 
@@ -470,28 +582,36 @@
             </div>
             <h2 class="heading">Professional Organizations</h2>
             <div class="item-box">
-                <div class="date">
+                <div class="empty-date"></div>
+                <!--<div class="date">
                     <span>2020</span>
-                </div>
-                <div class="item">
+                </div>-->
+                <div class="item-no-date">
                     <span>
-                        Coding organizations: Women Who Code, Django Girls, and PyDistrict
+                        Coding organizations: Women Who Code, Django Girls, DC Tech, and PyDistrict
                     </span>
                 </div>
             </div>
             <div class="item-box">
-                <div class="date">
+                <div class="empty-date"></div>
+                <!--<div class="date">
                     <span>2008–Present</span>
-                </div>
-                <div class="item">
+                </div>-->
+                <div class="item-no-date">
                     <span>
                         Entomological organizations: The Lepidopterists’ Society, the North 
                         American Butterfly Association, the Xerces Society, and the Southern 
                         Lepidopterists’ Society
                     </span>
+                    <ul>
+                        <li>
+                            Elected as Member-At-Large on the Executive Council of The Lepidopterists’ 
+                            Society (2014–2017)
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="item-box">
+            <!--<div class="item-box">
                 <div class="date">
                     <span>2014–2017</span>
                 </div>
@@ -501,7 +621,7 @@
                         Society
                     </span>
                 </div>
-            </div>
+            </div>-->
             <h2 class="heading">Awards and Honors</h2>
             <div class="item-box">
                 <div class="date">
